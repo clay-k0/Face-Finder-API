@@ -35,8 +35,6 @@ app.post("/register", register.handleRegister(db, bcrypt));
 app.get("/profile/:id", profile.handleProfileGet(db));
 app.put("/image", image.handleImageGet(db));
 
-// const PORT = process.env.PORT || 3000;
-
-app.listen(3000, () => {
-  console.log(`App is running on port 3000`);
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`App is running on port ${process.env.PORT || 3000}`);
 });
